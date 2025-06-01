@@ -1,0 +1,12 @@
+.header {
+    border: 2px solid red;
+    background-color: #828282;
+}
+.container {
+    width: 90%;
+    max-width: 970 px;
+    margin: o auto;
+    
+    width: min(90%, 970 px);
+    border: 2 px solid blue;
+}
