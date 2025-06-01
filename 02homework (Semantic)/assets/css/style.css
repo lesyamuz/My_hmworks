@@ -1,0 +1,15 @@
+/* style.css */
+pre {
+    background-color: #f4f4f4;
+    padding: 12px;
+    border-left: 4px solid #ccc;
+    font-family: 'Courier New', monospace;
+    border-radius: 6px;
+  }
+  iframe {
+    width: 729;
+    height: auto;
+    border: none;
+  }
+  
+  

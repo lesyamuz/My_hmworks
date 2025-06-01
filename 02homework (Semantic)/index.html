@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантичні елементи</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="#maintenance">Підтримка браузерів</a></li>
+                <li> <a href="#elements"> Нові семантичні елементи в HTML5 </a></li>
+                <li> <a href="#section"> HTML5 <code>&lt;section&gt;</code> елемент </a></li>
+                <li> <a href="#article"> HTML5 <code>&lt;article&gt;</code> елемент </a></li>
+                <li> <a href="#header"> HTML5 <code>&lt;header&gt;</code> елемент </a></li>
+                <li> <a href="#footer"> HTML5 <code>&lt;footer&gt;</code> елемент </a></li>
+
+            </ul>   
+        </nav>
+    </header>
+    <main>
+        <article>
+    
+            <h1>HTML5 Семантичні елементи</h1>
+                <p>Семантичний елемент чітко описує його значення як для браузера, так і
+                для розробника.
+                <br>Приклади <b>не семантичних</b> елементів: <code>&lt;div&gt;</code> і <code>&lt;span&gt;</code>- нічого не говорить
+                про його вміст.
+                <br>Приклади <b>семантичних</b> елементів: <code>&lt;form&gt;</code>, <code>&lt;table&gt;</code> і <code>&lt;article&gt;</code>- чітко
+                визначає його зміст.
+            </p>
+    
+        <section id="maintenance">
+            <h2> Підтримка браузерів </h2>
+            <img src="assets/images/image_of_all_browsers.webp" alt="Browsers" width="200">
+
+            <p>Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.
+                <br>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідомі
+                елементи".
+                <br>Прочитайте про це в <a href="https://www.blogger.com/onboarding"> підтримці браузера HTML5</a>
+            </p>
+            <a href="#"> Вгору </a>
+        </section>
+
+        <section id="elements">
+            <h2> Нові семантичні елементи в HTML5</h2>
+            <p>HTML5 пропонує нові семантичні елементи для визначення різних частин
+                веб-сторінки:
+            </p>
+                <ul>
+                    <li> <code>&lt;section&gt;</code> </li>
+                    <li> <code>&lt;article&gt;</code> </li>
+                    <li> <code>&lt;header&gt;</code> </li>
+                    <li> <code>&lt;footer&gt;</code> </li>
+                </ul>
+                <a href="#"> Вгору </a>
+        </section>
+
+        <section id="section">
+            <h2> HTML5 <code>&lt;section&gt;</code> елемент </h2>
+            
+            <p>Елемент <code>&lt;section&gt;</code> визначає розділ в документі.
+                <br>Згідно з документацією в3к′с HTML5: "розділ представляє собою тематичну
+                угруповання контенту, зазвичай з заголовком".
+                <br>Домашня сторінка зазвичай може бути розділена на розділи для
+                ознайомлення, змісту і контактної інформації.
+            </p>
+                <h3>Приклад</h3>
+<pre><code>&lt;section&gt;
+  &lt;h1&gt;WWF&lt;/h1&gt;
+  &lt;p&gt;The World Wide Fund for Nature (WWF) is....&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+                <a href="#"> Вгору </a>
+             </section>
+
+             <section id="article">
+                <h2> HTML5 <code>&lt;article&gt;</code> елемент </h2>
+                <p>Елемент <code>&lt;article&gt;</code> визначає незалежний, автономний вміст.
+                        <br>Стаття повинна мати сенс самостійно, і вона повинна мати можливість
+                        читати його незалежно від іншої частини веб-сайту.
+                        <br>Приклади того, де можна використовувати елемент <code>&lt;article&gt;</code>
+                </p>
+                <ul>
+                    <li> Повідомлення на форумі </li>
+                    <li> блозі </li>
+                    <li> Газетна стаття </li>
+                </ul>
+                <h3>Приклад</h3>
+<pre><code>&lt;article&gt;
+    &lt;h1&gt;What Does WWF Do?&lt;/h1&gt;
+    &lt;p&gt;WWF's mission is to stop the degradation of our planet's natural environment, 
+    and build a future in which humans live in harmony with nature.&lt;/p&gt;
+&lt;/article&gt;
+</code></pre> 
+                <a href="#"> Вгору </a>  
+             </section>
+
+             <section id="header">
+                <h2> HTML5 <code>&lt;header&gt;</code> елемент </h2>
+                <p> Елемент <code>&lt;header&gt;</code> задає заголовок для документа або розділу.
+                    <br> Елемент <code>&lt;header&gt;</code> повинен використовуватися в якості контейнера для
+                    вступного змісту.
+                    <br> В одному документі може бути кілька елементів <code>&lt;header&gt;</code>.
+                    <br> У наступному прикладі визначається заголовок для статті:
+                </p>
+                    <h3>Приклад</h3>
+<pre><code>&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;What Does WWF Do?&lt;/h1&gt;
+        &lt;p&gt;WWF's mission is to stop the degradation of our planet's natural environment, 
+        and build a future in which humans live in harmony with nature.&lt;/p&gt;
+    &lt;header&gt;
+&lt;/article&gt;
+</code></pre>
+                <a href="#"> Вгору </a>
+             </section>
+
+             <section id="footer">
+                <h2> HTML5 <code>&lt;footer&gt;</code> елемент</h2>
+                <p> Елемент <code>&lt;footer&gt;</code> вказує нижній колонтитул для документа або розділу.
+                    <br> Нижній колонтитул зазвичай містить автора документа, інформацію про
+                    авторське право, посилання на умови використання, контактні дані і т.д.
+                    <br>В одному документі може бути кілька елементів <code>&lt;footer&gt;</code>.
+                </p>
+                    <h3>Приклад</h3>
+<pre><code>&lt;footer&gt;
+    &lt;p&gt; Posted by: Hege Refsnes &lt;/p&gt;
+    &lt;p&gt; &lt;Contact Information: &lt;a href="mailto:someone@html5css.ua"&gt; 
+    mailto:someone@html5css.ua &lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;
+                </code></pre>
+                <a href="#"> Вгору </a>
+             </section>
+        </article>
+
+             <section>
+                <h3>Відео</h3>
+                <iframe src="https://www.youtube.com/embed/dEBVe8Ij7JU?list=PLytQ0YczAfcdj-OUqWO20vPsr0ix0M1Us" 
+                title="Front-End розробка. Сучасні тренди" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </section> 
+
+            <section>
+                <h3>Ркзюме</h3>
+                <iframe src="01/01homework/index.html"></iframe>
+            </section>
+    </main>
+</body>
+   
+</html>
