@@ -1,48 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title> Document</title>
-    </head>
-    <body>
-        <form action="http://local/host/test/test.php" method ="post" target="_blank" enctype="multipart/form-data">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" value="" placeholder="someone@gmai.com">
-            <br>
-            <label>
-                Password 
-            </label>
-            <input type="password" name="password" required value="password" placeholder="1234">
+<html lang="uk">
 
-            <label>
-                <input type="checkbox" name="course[]" value="fe"> Front-end
-            </label>
-            <label>
-                <input type="checkbox" name="course[]" value="be"> Back-end
-            </label>
-            <label>
-                <input type="checkbox" name="course[]" value="qa"> QA
-            </label>
-            <label>
-                <input type="checkbox" name="course[]" value="pm"> Project Manager
-            </label>
-          </form> `
-        <div>
-            <form action="" method="post">
-                <div class="form-row">
-                <label for="">Full name</label>
-                <input type="text">
-                </div>
-                <div class="buttons">
-                    <button type="reset">Clear form</button>
-                </div>
-        
-            </form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-        </div>
-        
-    </body>
+<body>
+  <form action="#" method="post" target="_blank" enctype="multipart/form-data">
 
+    <label for="username"> Повне ім'я
+      <input type="text" name="username" id="username" placeholder="Name"></label>
+
+
+    <br>
+    <label> <span lang="en"> Email</span>
+      <input type="text" name="email" id="email" placeholder="someone@gmail.com"></label>
+
+    <br>
+    <label> Пароль
+      <input type="password" id="password" name="password" required value="password" placeholder="1234"></label>
+
+    <br>
+    <label for="confirm_password"> Пароль ще раз
+      <input type="password" id="confirm_password" name="confirm_password" required>
+    </label>
+
+    <br>
+    <span class="fake_lbl"> Стать </span>
+    <label>
+      <input type="radio" id="male" name="gender[]" value="male" checked> чоловіча
+    </label>
+    <label>
+      <input type="radio" id="female" name="gender[]" value="female">жіноча
+    </label>
+
+    <br>
+    <label for="age"> Вік
+      <input type="text" id="age" name="age[]">
+    </label>
+
+    <br>
+    <label for="course"> Курс</label>
+    <select id="course" name="course">
+      <option value="">-=Виберіть курс=-</option>
+      <option value="frontend">Frontend</option>
+      <option value="backend">Backend</option>
+      <option value="uxui">UX/UI Design</option>
+      <option value="qa">QA Manual</option>
+    </select>
+
+    <br>
+    <label for="address"> Повна адреса</label>
+    <textarea id="address" name="address" placeholder="Країна, регіон, місто/селище, вулиця" rows="3"
+      cols="30"></textarea>
+    <br>
+    <input type="checkbox" id="agree" name="agree" value="true" required>
+    <label for="agree"> Я погоджуюсь з обробкою персональних даних</label>
+
+    <div class="buttons">
+      <button type="reset"> Очистити форму </button>
+
+      <button type="submit"> Зареєструватися</button>
+    </div>
+  </form>
+</body>
 
 </html>
