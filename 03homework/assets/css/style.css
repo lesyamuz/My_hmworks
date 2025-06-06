@@ -1,12 +1,106 @@
-.header {
-    border: 2px solid red;
-    background-color: #828282;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+body {
+    font-family: Open-Sans, sans-serif;
 }
-.container {
-    width: 90%;
-    max-width: 970 px;
-    margin: o auto;
+p {
+    text-align: center;
+    line-height: 1.6; 
+    margin-bottom: 1rem; 
+      
+}
+
+
+.main-menu ul {
+    text-align: center;
+    font-size: 0;
+}
+
+.main-menu li {
+    font-size: 1.125rem;
+    display: inline-block;
+    margin: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.hgroup ul {
+    text-align: center;
+    font-size: 0;
+}
+
+.hgroup li {
+    font-size: 1.125rem;
+    display: inline-block;
+    margin: 20px;  
+}
+
+#about-me {
+    background-color: #E5E5E5;
+    width: 100%;
+}
+
+#about-me .container {
+    text-align: center;
+    align-content: center;
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 505px;
+}
+
+#about-me .content {
+
+    width: 480px;
+    height: 210px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+#skills .container {
+    text-align: center;
+}
+
+#skills ul {
+    font-size: 1.125rem;
+    display: inline-block;
+    margin: 20px;
+}
+
+#portfolio {
+    background-color: #E5E5E5;
+    width: 100%;
+    padding-top: 59px;
     
-    width: min(90%, 970 px);
-    border: 2 px solid blue;
+}
+
+footer {
+
+    padding: 40px 0;
+    text-align: center;
+  }
+
+#contacts ul {
+    text-align: center;
+    font-size: 0;
+}
+
+#contacts li {
+    font-size: 1.125rem;
+    display: inline-block;
+    margin: 20px;
 }
