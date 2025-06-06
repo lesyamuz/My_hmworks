@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title> Form</title>
+  </head>
+  <body>
+    <form
+      action="http://local/host/test/test.php"
+      method="post"
+      target="_blank"
+      enctype="multipart/form-data">
+      
+      <label for="username"> Full Name</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        value=""
+        placeholder="Name"/>
+      
+      <br/>
+      <label> Email </label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        required value="email"
+        placeholder="someone@gmail.com"/>
+        
+        <br/>
+        <label> Password </label>
+        <input type="password" name="password" required value="password" placeholder="1234"/>
+
+        <br/>
+        <label> Gender </label>
+        <label> male </label>
+            <input type="radio" id="male" name="male[]" value="gender">
+        <label> female </label>
+            <input type="radio" id="female" name="female[]" value="gender">
+
+        <br/>
+        <label>
+        <input type="checkbox" name="course[]" value="fe"/> Front-end
+      </label>
+      <label>
+        <input type="checkbox" name="course[]" value="be"/> Back-end
+      </label>
+      <label> <input type="checkbox" name="course[]" value="qa"/> QA </label>
+      <label>
+        <input type="checkbox" name="course[]" value="pm"/> Project Manager
+      </label>
+      <br>
+      <label for="course"> Courses</label>
+      <select id="course" name="course">
+        <option value="" selected disabled>-=Select a course=-</option>
+        <optgroup label="Web skills">
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="uxui">UX/UI Design</option>
+        <option value="qa">QA Manual</option>
+      </optgroup>
+      </select>
+    </form>
+    `
+    <div>
+      <form action="" method="post">
+        <div class="form-row">
+          <label for="">Full name</label>
+          <input type="text"/>
+        </div>
+        <div class="buttons">
+          <button type="reset">Clear form</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
