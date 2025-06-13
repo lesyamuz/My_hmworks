@@ -1,179 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figma</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
 
-  <body>
-    <header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="main-menu">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section classs="first-section">
       <div class="container">
-        <nav class="main-menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about-me">About me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-          </ul>
-        </nav>
+        <h1>Denis Novak</h1>
+        <img src="assets/images/Denis.Novak.photo.webp" alt="denis">
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section>
-        <div class="container">
-          <h1>Denis Novak</h1>
-          <img src="assets/images/Denis.Novak.photo.webp" alt="denis">
+    <section id="about" class="bg-gray">
+      <div class="container">
+        <h2>About me</h2>
+        <div class="content">
+          <p>
+            Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in
+            design and everything connected with it.
+          </p>
+          <p>
+            I'm studying at courses "Web and mobile design interfaces" in
+            IT-Academy.
+          </p>
+          <p>Ready to implement excellent projects with wonderful people.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about-me">
-        <div class="container">
-          <h2>About me</h2>
-          <div class="content">
-            <p>
-              Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in
-              design and everything connected with it.
-            </p>
-            <p>
-              I'm studying at courses "Web and mobile design interfaces" in
-              IT-Academy.
-            </p>
-            <p>Ready to implement excellent projects with wonderful people.</p>
+    <section id="skills">
+      <div class="container">
+        <hgroup>
+          <h2>Skills</h2>
+          <p>I work in such programs as</p>
+        </hgroup>
+        <ul class="skills-list">
+          <li>
+            <img src="assets/images/Ps.webp" alt="ps">
+            <div class="skill-title">
+              Adobe<br>Photoshop
+            </div>
+            <div class="rating">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon" class="gray">
+              <img src="assets/images/star-icon.webp" alt="Star icon" class="gray">
+              <img src="assets/images/star-icon.webp" alt="Star icon" class="gray">
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/Ai.webp" alt="Ai">
+            <div class="skill-title">
+              Adobe <br>Illustrator
+            </div>
+            <div class="rating">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon" class="gray">
+              <img src="assets/images/star-icon.webp" alt="Star icon" class="gray">
+            </div>
+          </li>
+          <li>
+            <img src="assets/images/Ae.webp" alt="Ae">
+            <div class="skill-title">
+              Adobe <br> After Effects
+            </div>
+            <div class="rating">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon" class="gray">
+            </div>
+          </li>
+
+          <li>
+            <img src="assets/images/Figma.webp" alt="Figma">
+            <div class="skill-title">
+              Figma
+            </div>
+            <div class="rating">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+              <img src="assets/images/star-icon.webp" alt="Star icon">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="portfolio" class="bg-gray">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-item">
+          <img src="assets/images/Fashion-Store.webp" alt="Fashion-Store">
+          <div>
+            <a href="#" target="_blank" rel="noreferrer nofollow">Online fashion store - Homepage</a>
           </div>
         </div>
-      </section>
 
-      <section id="skills">
-        <div class="container">
-          <hgroup>
-            <h2>Skills</h2>
-            <p>I work in such programs as</p>
-          </hgroup>
-          <ul>
-            <li>
-              <img src="assets/images/Ps.webp" alt="ps">
-              <p>Adobe Photoshop</p>
-              <div class="stars">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-grey.webp" alt="star">
-                <img src="assets/images/star-grey.webp" alt="star">
-                <img src="assets/images/star-grey.webp" alt="star">
-              </div>
-            </li>
-          </ul>
-
-          <ul>
-            <li>
-              <img src="assets/images/Ai.webp" alt="Ai">
-              <p>Adobe Illustrator</p>
-              <div class="stars">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-grey.webp" alt="star">
-                <img src="assets/images/star-grey.webp" alt="star">
-              </div>
-            </li>
-          </ul>
-
-          <ul>
-            <li>
-              <img src="assets/images/Ae.webp" alt="Ae">
-              <p>Adobe After Effects</p>
-              <div class="stars">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-grey.webp" alt="star">
-              </div>
-            </li>
-          </ul>
-
-          <ul>
-            <li>
-              <img src="assets/images/Figma.webp" alt="Figma">
-              <p>Figma</p>
-              <div class="stars">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-                <img src="assets/images/star-icon.webp" alt="star">
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="portfolio">
-        <div class="container">
-          <h2>Portfolio</h2>
-          <div class="portfolio-item">
-            <img src="assets/images/Fashion-Store.webp" alt="Fashion-Store">
-            <p><a href="#"> Online fashion store - Homepage </a></p>
-          </div>
-
-          <div class="portfolio-item">
-            <img src="assets/images/reebok_web.webp" alt="reebok_web">
-            <p><a href="#"> Reebok Store - Concept </a></p>
-          </div>
-
-          <div class="portfolio-item">
-            <img src="assets/images/braun-landing.webp" alt="braun-landing">
-            <p><a href="#"> Braun Landing Page - Concept </a></p>
+        <div class="portfolio-item">
+          <img src="assets/images/reebok_web.webp" alt="reebok_web">
+          <div>
+            <a href="#" target="_blank" rel="noreferrer nofollow">Reebok Store - Concept</a>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer id="contacts">
-        <div class="container">
-          <hgroup>
-            <h2>Contacts</h2>
-            <p>Want to know more or just chat? You are welcome!</p>
-          </hgroup>
-          <a href="mailto:novik@gmail.com"> Send Message </a>
-          <div class="container">
-            <ul>
-              <li>
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <img src="assets/images/linkedin.webp" alt="linkedin">
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <img src="assets/images/Insta.webp" alt="Insta">
-                </a>
-              </li>
-              <li>
-                <a href="https://www.behance.net"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <img src="assets/images/behance.webp" alt="behance">
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.dribbble.com"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <img src="assets/images/dribble.webp" alt="dribble"></a>
-              </li>
-            </ul>
+        <div class="portfolio-item">
+          <img src="assets/images/braun-landing.webp" alt="braun-landing">
+          <div>
+            <a href="#" target="_blank" rel="noreferrer nofollow">Braun Landing Page - Concept</a>
           </div>
-          <p>Like me on LinkedIn, Instagram, Behance, Dribble</p>
         </div>
-    </footer>
-  </body>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <div class="container">
+      <hgroup>
+        <h2>Contacts</h2>
+        <p>Want to know more or just chat? You are welcome!</p>
+      </hgroup>
+      <div class="btn-wrap">
+        <a href="mailto:denis.novik@gmail.com" class="btn">Send message</a>
+      </div>
+      <div>
+        <ul class="soc-list">
+          <li>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/linkedin.webp" alt="linkedin">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/Insta.webp" alt="Insta">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/behance.webp" alt="behance">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.dribbble.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/dribble.webp" alt="dribble"></a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer-text">Like me on <br>LinkedIn, Instagram, Behance, Dribble</p>
+    </div>
+  </footer>
+</body>
+
 </html>
