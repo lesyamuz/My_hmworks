@@ -56,7 +56,7 @@ header .container {
 .main-menu ul li a:active {
     color: #070707;
     text-shadow: 0 0 1px #070707; 
-    transform: scale(2);
+    transform: scale(01.125rem);
 }
 
 
