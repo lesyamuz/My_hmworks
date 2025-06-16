@@ -102,7 +102,7 @@ hgroup, footer {
         font-size: 27px;
         line-height: 37px;
 
-        transition: all, 1s ease-in;
+        transition: all, 0.2s ease-in;
 
         &:hover {
         border-color: #fff;
@@ -138,7 +138,7 @@ hgroup, footer {
         rotate: -45deg;
         left: 22px;
         top: 27px;
-    }
+        }
 
     small {
         font-size: 17px;
