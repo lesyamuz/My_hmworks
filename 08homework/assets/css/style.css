@@ -26,10 +26,19 @@ body {
     margin: 0 auto;
 }
 
-header,
+header {
+    background-color: var(--gray-secondary);  
+    padding: 20px; 
+}
+
+
+
 footer {
     background-color: var(--gray-secondary);
+    width: min(90%, 800px);
+    text-align: center;
     padding: 20px;
+    margin: 45px auto;
 }
 
 hgroup, footer {
@@ -93,7 +102,7 @@ hgroup, footer {
         font-size: 27px;
         line-height: 37px;
 
-        transition: all, 2s ease;
+        transition: all, 1s ease-in;
 
         &:hover {
         border-color: #fff;
@@ -101,6 +110,7 @@ hgroup, footer {
 
         &:active {
         background-color: var(--accent-color);
+        transition: background-color 0.2s ease;
         }
 
         &::before,
@@ -162,22 +172,4 @@ hgroup, footer {
             }
         }
     }
-}
-
-
-
-input[type=checkbox]:checked+label {
-    font-weight: bold;
-}
-
-label:has(input[type=checkbox]:checked) body {
-    background-color: var(--gray-secondary);
-
-}
-
-.soc-btn {
-    --size: 32px;
-    width: var(--size);
-    height: var(--size);
-    padding: calc(var(--size) / 4);
 }
