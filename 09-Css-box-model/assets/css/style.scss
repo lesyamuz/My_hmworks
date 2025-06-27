@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: o;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+  }
+
+  $background-color: #3399CC;
+  $text-color: #FFF;
+  $paris: #33CCCC;
+  $belgrade: #996699;
+  $venice: #C24747;
+  $tel-avive: #E2674A;
+  $cair: #FFCC66;
+  $new-york: #99CC99;
+  $new-delhi: #669999;
+  $san-francisco: #CC6699;
+  $tokyo: #339966;
+  $sydney: #666699;
+
+  body {
+    font-family: sans-serif;
+    background-color: $background-color;
+    border-color: #2B81AC;
+    
+  }
+
+  
+  
+.container { 
+    width: min(90%, 1170px);
+    margin: 0 auto;
+  }
+    
+  h1 {
+    color: white;
+    font-family: "Lucida Sans Unicode";
+    font-size: 21px;
+  }
+  
+  
+  .cities {
+    display: inline-block;
+    width: min(90%, 1170px);
+    margin: 0 auto;
+    list-style: none;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    text-align: center;
+    padding: 10px;
+    background: white;
+    font-size: 0;
+  }
+
+  
+
+  .cities li {
+    margin: 5px 0;
+    display: inline-block;
+    background-color: orange;
+    font-size: 22px;
+    color: #FFF;
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    cursor: pointer;
+    
+  }
+
+  cities li:hover {
+    opacity: 0.6;
+  }
+
+  .cities i {
+    margin-right: 8px;
+    color: #ff89
+  }

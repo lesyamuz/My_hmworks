@@ -70,7 +70,7 @@
 .col {
     flex-basis: calc(50% -30px);
     background-color: lightgreen;
-    height:
+    height;
 
 }
 
