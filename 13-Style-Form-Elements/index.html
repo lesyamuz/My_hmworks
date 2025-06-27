@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-wrap">
+      <form action="#" method="post">
+        <h1>Create an Account</h1>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+          </div>
+
+          <div class="field">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+          <p>We'll never share your email with anyone else.</p>
+        </div>
+
+        <div class="radio-group">
+            <label class="radio">
+              <input type="radio" name="gender" value="male" checked>
+              <span>Male</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="gender" value="female" checked>
+              <span>Female</span>
+            </label>
+          </div>   
+
+        <div class="form-row">
+          <div class="field">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="">Select</option>
+              <option>Ukraine</option>
+              <option>Poland</option>
+              <option>USA</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+
+        <p class="terms">
+          By clicking <strong>'Sign Up'</strong> button, you confirm that you accept our
+          <br><a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        </p>
+
+        <hr>
+
+        <p class="login">
+          <span>Have an account?</span> <a href="#">Log In</a>
+        </p>
+      </form>
+    </div>
+    </div>
+    <script src="assets/js/jquery-3.7.1.js" ></script>
+    <script src="assets/plugins/select2/js/select2.full.min.js"></script>
+    <script>
+      $(function(){
+        $('select').select2({
+          minimumResultsForSearch: Infinity
+        })
+      })
+        
+    </script>
+</body>
+</html>
