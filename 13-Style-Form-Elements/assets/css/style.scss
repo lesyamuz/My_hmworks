@@ -289,9 +289,16 @@ input[type=radio] {
 
 .photo-group {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px; 
   padding-bottom: 20px;              
+}
+
+.file-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .avatar {
@@ -303,8 +310,7 @@ input[type=radio] {
 }
 
 .file-area {
-  display: flex;
-  align-items: center;
+  display: flex; 
   gap: 12px;               
 }
 
@@ -313,7 +319,7 @@ input[type=radio] {
   position: relative;
   display: flex;
   align-items: center;
-  width: 138px;
+  width: 148px;
   height: 30px;
   padding: 0 10px;  
   border: 1px solid #E4E4E4;
@@ -321,8 +327,8 @@ input[type=radio] {
   cursor: pointer;
 
   .filename {
-    font-size: 14px;
-    color: #969696;
+    font-size: 13px;
+    color: #E4E4E4;
     line-height: 1;
     white-space: nowrap;
     overflow: hidden; 
