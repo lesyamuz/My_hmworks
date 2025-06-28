@@ -1,3 +1,6 @@
+
+$text-color: black;
+
 * {
     padding: 0;
     margin: 0;
@@ -11,18 +14,26 @@
     
 }
 
+h2 {
+    font-family: "Delius Unicase", sans-serif;
+    text-align: center;
+    font-size: 36px;
+    color: $text-color;
+    padding-bottom: 80px;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     //grid-template-rows: repeat(4, calc(25vh - (20px * 3 / 4 )));
     
-    gap: 30px;
+    gap: 20px;
 }
 
 .item {
     
     border-radius: 20px;
-    overflow: hidden
+    overflow: hidden;
   }
   
 .item img {
@@ -36,15 +47,12 @@
 
 
 .col-2 {
-    
+    grid-column: span 2;  
     
 }
 
-
-
 .row-2 {
-    grid-column: span 2;
-
+    grid-row: span 2;
     
 }
 
