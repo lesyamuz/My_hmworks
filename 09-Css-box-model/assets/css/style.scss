@@ -1,76 +1,134 @@
 * {
     padding: 0;
-    margin: o;
+    margin: 0;
     box-sizing: border-box;
     transition: all .2s ease-in-out;
   }
 
+  
+
   $background-color: #3399CC;
+  $icon-color: tomato;
   $text-color: #FFF;
-  $paris: #33CCCC;
-  $belgrade: #996699;
-  $venice: #C24747;
-  $tel-avive: #E2674A;
-  $cair: #FFCC66;
-  $new-york: #99CC99;
-  $new-delhi: #669999;
-  $san-francisco: #CC6699;
-  $tokyo: #339966;
-  $sydney: #666699;
+  
 
   body {
-    font-family: sans-serif;
-    background-color: $background-color;
-    border-color: #2B81AC;
     
+    font-family: sans-serif;  
   }
 
   
   
-.container { 
-    width: min(90%, 1170px);
-    margin: 0 auto;
-  }
+  main {
+    width: 100%;            
+    max-width: 1440px; 
+    height: auto;     
+    margin-inline: auto;    
+    background-color: $background-color;
+    border: 25px solid #2b81ac; 
+    text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 66px 135px 119px;
+  
+}
     
   h1 {
-    color: white;
+    color: $text-color;
     font-family: "Lucida Sans Unicode";
-    font-size: 21px;
+    font-size: 1.313rem;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 39px;
   }
   
   
-  .cities {
-    display: inline-block;
-    width: min(90%, 1170px);
-    margin: 0 auto;
+  .wrapper {
+    display: block;
+    width: 100%;
+    font-size: 0;
+    padding: 2px;
+    max-width: 1170px;
+    margin-inline: auto;
     list-style: none;
     font-family: "Lucida Sans Unicode", sans-serif;
-    text-align: center;
-    padding: 10px;
-    background: white;
-    font-size: 0;
-  }
-
-  
-
-  .cities li {
-    margin: 5px 0;
-    display: inline-block;
-    background-color: orange;
-    font-size: 22px;
-    color: #FFF;
-    text-align: center;
-    width: 30%;
-    padding: 20px;
-    cursor: pointer;
     
+    margin-bottom: 35px;
   }
-
-  cities li:hover {
-    opacity: 0.6;
+  
+  .blue { background: #3399CC; }
+  .light-blue { background: #33CCCC; }
+  .purple { background: #996699; }
+  .red { background: #C24747; }
+  .orange {background: #E2674A;}
+  .yellow {background: #FFCC66;}
+  .mint {background: #99CC99;}
+  .steel-blue {background: #669999;}
+  .pink {background: #CC6699;}
+  .green {background: #339966;}
+  .indigo {background: #666699;}
+  
+  .item {
+    padding: 2px;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 1.375rem;
+    color: $text-color;
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+  
+    &:hover {
+      opacity: 0.6;
+    }
+  
+    
+  
+    &.width50 {
+      width: 50%;
+    }
+  
+    &.width100 {
+      width: 100%;
+    }
+  
+    .item_weather {
+      display: block;
+      text-align: center;
+      font-size: 1.375rem;
+      color: $icon-color;
+      line-height: 2.625rem;
+      
+      p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: "Lucida Sans Unicode";
+        font-size: 1.375rem;
+        font-weight: 400;
+        text-align: center;
+        }
+        i {
+      margin-left: 8px;
+      color: rgba(255, 255, 255, 0.70);
+      font-family: "weathericons";
+      font-size: 42px;
+      font-weight: 400;
+      line-height: normal;
+      vertical-align: middle;
+    }
+      }
+  
+    .item-wrap {
+      padding: 25px 0 34px;
+    }
   }
-
-  .cities i {
-    margin-right: 8px;
-    color: #ff89
-  }
+  
+  p {
+    color: $text-color;
+    font-family: "Lucida Sans Unicode";
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    }
