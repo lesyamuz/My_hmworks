@@ -1,0 +1,166 @@
+* {
+   padding: 0; 
+   margin: 0;
+   box-sizing: border-box;
+}
+
+$text-color: #2F281E;
+$text-color-2: #544837;
+$primary-color: #FF9900;
+$secondary-color: #D80B0A;
+$secondary-color-light: #F03E3D; /* primary-colors/coral*/
+
+ul {
+ list-style: none;
+
+}
+
+img {
+    vertical-align: top;
+}
+
+a, button {
+    transition: all .2s ease-in-out;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: $text-color;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.625rem;
+
+}
+
+.container {
+    width: min(90%, 1230px);
+    margin: 0 auto;
+
+}
+
+.button-group {
+    display: flex;
+    gap: 32px;
+}
+
+.btn {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px 25px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    color: #fff;
+
+    &:hover {
+        background-color: $secondary-color-light;
+        border-color: $secondary-color-light;
+    }
+
+    &:active {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+    }
+
+    &.btn-secondary {
+        color: $text-color;
+        background-color: transparent;
+        border: 1px solid $text-color;
+
+        &:hover {
+            color: $secondary-color-light;
+            border-color: $secondary-color-light;
+            }
+        
+        &:active {
+            color: $secondary-color;
+            }
+    }
+}
+
+header {
+    padding: 17px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+}
+
+.main-menu {
+    display: flex;
+    gap: 40px;
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+        
+        
+        &:hover {
+            color: $primary-color;
+        }
+        &:active {
+            color: $secondary-color;
+        }
+    }
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    
+    width: min(90%, 1230px);
+    margin: 0 auto;
+    padding: 105px 0;
+
+    h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 3.375rem;
+    margin-bottom: 20px;
+    }
+
+    p {
+        font-family: "Montserrat", sans-serif;
+        color: $text-color-2;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
