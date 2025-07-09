@@ -7,6 +7,12 @@ $text-color: black;
     box-sizing: border-box;
 }
 
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container {
     width: min(90%, 1440px);
     margin: 0 auto;
@@ -34,6 +40,43 @@ h2 {
     
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    & .top-panel {
+       @include flex-between;
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       padding: 20px 20px;
+
+       background: rgba(0, 0, 0, 0.45);  
+       backdrop-filter: blur(4px);
+
+       z-index: 2;
+       opacity: 0;
+       visibility: hidden;
+       transform: translateY(-100%);
+       transition: all 0.3s ease;
+    }
+    &:hover .top-panel,
+    &:focus-within .top-panel {   
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    & .bottom-panel {
+       @include flex-between;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       padding: 20px 20px;
+       z-index: 1;
+    }
   }
   
 .item img {
@@ -55,6 +98,7 @@ h2 {
     grid-row: span 2;
     
 }
+
 
 
 

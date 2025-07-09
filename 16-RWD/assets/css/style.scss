@@ -44,3 +44,82 @@ body {
     flex-grow: 1;
   }
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+header {
+  height: 80px;
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+ .logo {
+  font-weight: 800;
+  font-size: 3rem;
+ }
+
+.main-menu {
+  ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    a {
+      font-size: 1.5rem;
+      color: #333;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+}
+
+.hamburger {
+  button {
+    display: inline-block;
+    width: 4opx;
+    height: 40px;
+    position: relative;
+    &::before, &::after {
+      content: '';
+    }
+    &::before, &::after, span {
+      display: inline-block;
+      height: 3px;
+      width: 30px;
+      border-radius: 2px;
+      background-color: #333;
+      position: absolute;
+      left: 3px;
+    }
+    span {
+      top: 7px;
+    }
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      bottom: 7px;
+    }
+  }
+}
+
+.overlay {
+  position: fixedd;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0,0,0,.7)
+}
+
+@media screen and (max-width: 600px) {
+  
+}
