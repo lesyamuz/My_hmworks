@@ -1,4 +1,5 @@
-@import 'fonts';
+@use 'fonts.scss' as *;
+
 $main-text-color: #232323;
 $sup-title-color: #333333;
 $accent-color: #FC0;
