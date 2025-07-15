@@ -1,16 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
+
 <body>
-  <div class="page-wrapper">
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <div class="overlay"></div>
+  <div class="mobile-menu-panel">
+    <div class="mm-top">
+      <div class="logo">
+        <a href="/">
+          <img src="assets/images/logo.jpg" alt="logo">
+        </a>
+      </div>
+      <div class="hamburger">
+        <button type="button" class="close" onclick="closeMenu()">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
   </div>
+  <div class="page-wrapper">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="assets/images/logo.jpg" alt="logo">
+          </a>
+        </div>
+        <div class="header-right">
+          <nav class="main-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="search-wrap">
+            <button type="button">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.8942 11.0715L17.6712 14.6313C17.8399 14.8079 17.8316 15.0783 17.6524 15.2454L16.9914 15.8684C16.9027 15.9526 16.7821 16 16.6562 16C16.5303 16 16.4096 15.9526 16.3209 15.8684L12.5439 12.3085C12.4394 12.21 12.3446 12.1028 12.2606 11.9881L11.5524 11.0982C10.3806 11.9801 8.92549 12.4602 7.42595 12.4598C4.33594 12.4699 1.65084 10.461 0.960303 7.62231C0.269767 4.78365 1.75809 1.87288 4.54414 0.613257C7.3302 -0.646363 10.6704 0.0813446 12.5873 2.36555C14.5042 4.64977 14.4862 7.88086 12.5439 10.1459L13.4881 10.76C13.6356 10.849 13.7718 10.9535 13.8942 11.0715ZM2.70508 6.23017C2.70508 8.68773 4.81889 10.68 7.42641 10.68C8.67859 10.68 9.87948 10.2112 10.7649 9.37666C11.6503 8.54216 12.1477 7.41034 12.1477 6.23017C12.1477 3.77262 10.0339 1.78037 7.42641 1.78037C4.81889 1.78037 2.70508 3.77262 2.70508 6.23017Z"
+                  fill="black" />
+              </svg>
+            </button>
+          </div>
+          <div class="hamburger">
+            <button type="button" onclick="openMenu()">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Manifest is a newborn theme. Clean, simple and fast.</h1>
+        </div>
+      </section>
+
+      <section class="blog-section">
+        <div class="container">
+          <h2>Blog</h2>
+          <article>
+            <div class="pic-wrap">
+              <img class="lazy" src="assets/images/image.webp" alt="image-arrow">
+            </div>
+            <div class="content-wrap">
+              <p class="tag">Technology, Interface Design</p>
+              <a href="/">
+                <h3>Using UX Design to Build a Sustainable Future</h3>
+              </a>
+              <time datetime="2020-05-06">6 May, 2020</time>
+              <p class="description">Transformation has to be driven by everybody, not just by climate groups,
+                and we have a responsibility to use our influence to drive this.</p>
+            </div>
+          </article>
+          <article class="reverse">
+            <div class="pic-wrap">
+              <img class="lazy" src="assets/images/blog-image2.webp" alt="image">
+            </div>
+            <div class="content-wrap reverse">
+              <p class="tag">Technology, Interface Design</p>
+              <a href="/">
+                <h3>Using UX Design to Build a Sustainable Future</h3>
+              </a>
+              <time datetime="2020-05-06">6 May, 2020</time>
+              <p class="description">Transformation has to be driven by everybody, not just by climate groups,
+                and we have a responsibility to use our influence to drive this.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="posts-section">
+        <div class="container">
+          <div class="title-wrap">
+          <h3>Latest Posts</h3>
+          <p><a href="#">View All &#8594</a></p>
+        </div>
+
+          <div class="posts">
+          <article>
+            <div class="img-wrap">
+              <img class="lazy" src="assets/images/image.lamp.webp" alt="lamp">
+            </div>
+            <div class="post-content">
+              <div class="post-info">
+              <p class="post-tag">Interface Design</p>
+              <time datetime="2020-06-08">8 June, 2020</time>
+            </div>
+              <h4><a href="#">UX traffic light colours</a></h4>
+              <p class="description">UI has to make a huge visual difference between warning, an alert and a success.
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="img-wrap">
+              <img class="lazy" src="assets/images/image.arrow.webp" alt="arrow">
+            </div>
+            <div class="post-content">
+              <div class="post-info">
+              <p class="post-tag">Technology</p>
+              <time datetime="2020-05-06">6 May, 2020</time>
+            </div>
+              <h4><a href="#">Using UX Design to Build a Sustainable Future</a></h4>
+              <p class="description">UI has to make a huge visual difference between warning, an alert and a success.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <div class="img-wrap">
+              <img class="lazy" src="assets/images/Image.roof.webp" alt="roof">
+            </div>
+            <div class="post-content">
+              <div class="post-info">
+              <p class="post-tag">Visual Design</p>
+              <time datetime="2020-06-08">8 June, 2020</time>
+            </div>
+              <h4><a href="#">Creativity vs. UX</a></h4>
+              <p class="description">Is it possible to create a delightful user experience without following best UX practices?
+              </p>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular-posts-section">
+        <div class="container">
+          <div class="title-wrap">
+          <h3>The Most Popular</h3>
+          <p><a href="#">View All &#8594</a></p>
+        </div>
+
+          <div class="popular-posts">
+          <article>
+            <div class="img-wrap">
+              <img class="lazy" src="assets/images/Image1.popular.webp" alt="lamp-light">
+            </div>
+            <div class="post-content">
+              <div class="post-info">
+              <p class="post-tag">Interface Design</p>
+              <time datetime="2020-06-08">8 June, 2020</time>
+            </div>
+              <h4><a href="#">Mentorship Match — How a simple LinkedIn feature can boost diversity</a></h4>
+              <p class="description">LinkedIn is on a clear mission to make professionals more successful by 
+                connecting the global workforce and as we learned — diversity and success go hand in hand
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <div class="img-wrap">
+              <img class="lazy" src="assets/images/Image2.popular.webp" alt="creativity">
+            </div>
+            <div class="post-content">
+              <div class="post-info">
+              <p class="post-tag">Visual Design</p>
+              <time datetime="2020-06-08">8 June, 2020</time>
+            </div>
+              <h4><a href="#">Creativity vs. UX</a></h4>
+              <p class="description">Is it possible to create a delightful user experience without following best UX practices?
+              </p>
+            </div>
+          </article>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button class="button">Load More</button>
+        </div>
+      </section>
+    
+      <div class="info">
+        <div class="container">
+        <div class="full-time">
+          <p>Full-time UI/UX designer</p>
+          <p>Head of Design at VeronaLabs.com</p>
+          <p>&#8594</p>
+        </div>
+        <div class="text">
+          <p>We work with clients around the world from our headquarters in Charleston, South Carolina.
+            </p>
+            <p>We focus on naming, branding, brand narratives, website design and development, and brand experiences.
+            </p>
+        </div>
+      </div>
+    </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <h2>Need a project?</h2>
+          <ul class="contacts">
+          <li><a href="tel:2395550108">(239) 555-0108</a></li>
+          <li><a href="mailto:tanya.hill@example.com">tanya.hill@example.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <ul class="soc-list">
+          <li class="social">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <svg class="soc-icon instagram">
+                    <use xlink:href="assets/images/sprite.svg#instagram"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <svg class="soc-icon facebook">
+                  <use xlink:href="assets/images/sprite.svg#facebook"></use>
+              </svg>
+          </a>
+      </li>
+      <li class="social">
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+            <svg class="soc-icon twitter">
+                <use xlink:href="assets/images/sprite.svg#twitter"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="social">
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <svg class="soc-icon linkedin">
+              <use xlink:href="assets/images/sprite.svg#linkedin"></use>
+          </svg>
+      </a>
+    </li>
+     </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Copyright Manifest Theme. Allrights reserved</p> 
+      </div>
+    </footer>
+  </div>
+  <script>
+    function openMenu() {
+      document.querySelector('.overlay').style.display = 'block';
+      document.querySelector('.mobile-menu-panel').style.display = 'block';
+      document.body.classList.add('open-menu');
+    }
+    function closeMenu() {
+      document.querySelector('.overlay').style.display = 'none';
+      document.querySelector('.mobile-menu-panel').style.display = 'none';
+
+    }
+
+
+  </script>
 </body>
+
 </html>
