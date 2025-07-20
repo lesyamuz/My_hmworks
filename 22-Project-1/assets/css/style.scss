@@ -5,6 +5,7 @@ $text-color: #fff;
 $accent-color: #5373FD;
 $accent-darker: #486BFE;
 $background-color: #F4F4F4;
+$background-color-dark: #333;
 
 *,
 *::before,
@@ -12,6 +13,11 @@ $background-color: #F4F4F4;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 ul,
@@ -37,10 +43,11 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
   }
   
   .container {
-    width: min(calc(100% - 40px), 1340px);
+    width: min(calc(100% - 40px), 1320px);
     margin: 0 auto;
   }
 
@@ -72,25 +79,29 @@ a {
       letter-spacing: 0.01rem;
     }
 
-  .btn-split {
-    position: relative;
-    width: 213px;
-    height: 60px;
-    background-color: $accent-color; 
-    color: $text-color;
-    font-family: 'Aleo';
-    line-height: 20px;
-    letter-spacing: 0.07rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    %btn-base {
+      background-color: $accent-color;
+      font-family: 'Aleo';
+      color: $text-color;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+    
     
   
+    .btn-split {
+      @extend %btn-base;
+      line-height: 20px;
+      letter-spacing: 0.07rem;
+      overflow: hidden;
+      position: relative;
+      width: 213px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     .text {
       position: relative;
       z-index: 2;
@@ -174,19 +185,19 @@ a {
 
   .hero {
     
-    background: #E5E5E5 url('../images/HeaderBackground.webp') center center/cover no-repeat;
+    background: $background-color url('../images/HeaderBackground.webp') center center/cover no-repeat;
     
     min-height: 100dvh;
   
     .container {
-      padding-top: 295px;
-      padding-bottom: 120px;
+      padding-top: 297px;
+      padding-bottom: 118px;
   
   
 
   hgroup {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 46px;
     h1 {
     color: $text-color;
     font-family: "Josefin Sans";
@@ -230,20 +241,15 @@ form {
   }
   
   .search-wrapper button {
+    @extend %btn-base;
     position: absolute;
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
-    border: none;
-    background-color: $accent-color;
-    color: $text-color;
-    font-family: 'Aleo';
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.25rem;
     letter-spacing: 0.088rem;
-    text-transform: uppercase;
-    cursor: pointer;
     display: flex;
     padding: 16px 24px;
     align-items: flex-start;
@@ -252,22 +258,21 @@ form {
   }
 
   .scroll-wrapper {
-    margin-top: 211px;
+    margin-top: 208px;
     
     display: flex;
     justify-content: center;
     a {
     color: $text-color;
-    display: flex; 
-    flex-direction: column; 
+    @include flex-column; 
     align-items: center;
-    gap: 4px;
+    
     }
   }
 }
 
   .why-section {
-    background: #E5E5E5 url('../images/WhyBackground.webp') center center/cover no-repeat;
+    background: $background-color url('../images/WhyBackground.webp') center center/cover no-repeat;
     min-height: 100dvh;
   
     .container {
@@ -280,8 +285,8 @@ form {
       
     
     .content {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
+      
       max-width: 648px;
       width: 100%;
       hgroup {
@@ -295,8 +300,7 @@ form {
     }
   }
     .images {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       
       gap: 16px;
       img {
@@ -304,15 +308,66 @@ form {
         height: 220px;
       }
       img:nth-child(2) {
-        margin-left: clamp(36px, 6vw, 110px);
+        margin-left: 74px;
       }
     }
   
   }
 
+  .search-places {
+    background-color: $background-color-dark;
+    .container {
+       padding: 10px 0 49px;
+       @include flex-column;
+    }
+  } 
+  .line-container {
+    overflow: hidden;
+  
+    .line-wrapper {
+      text-align: center;
+      margin-bottom: -43px;
+      
+    }
+  }
+
+  .icons-list-wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 23px;
+    justify-items: center;
+   z-index: 100;
+   
+   li.icon-content {
+    @include flex-column;
+    align-items: center;
+    width: 100%;
+  max-width: 424px;
+    height: 139px;
+    
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 14px;
+      &.search {
+      color: $accent-color;
+      fill: currentColor;
+        }
+      &.check-circle {
+        color: #FF6363;
+        fill: currentColor;
+      }
+      &.thumbs-up {
+        color: #00A2FF;
+        fill: currentColor;
+      }
+    }
+   }
+  }
+
   .grand-1 {
-    background: #E5E5E5 url('../images/house-grand.webp') center center/cover no-repeat;
-    min-height: 100dvh; 
+    background: $background-color url('../images/house-grand.webp') center center/cover no-repeat;
+    min-height: min(100dvh, 684px);
     .container {
       padding: 220px 0 120px;
       display: flex;
@@ -322,8 +377,8 @@ form {
 
 
   .grand-2 {
-    background: #E5E5E5 url('../images/grand-2.webp') center center/cover no-repeat;
-    min-height: 100dvh;
+    background: $background-color url('../images/grand-2.webp') center center/cover no-repeat;
+    min-height: min(100dvh, 684px);
   
     .container {
       padding: 220px 0 120px;
@@ -339,105 +394,143 @@ form {
         .city {
           font-size: 1.25rem;
           line-height: 1.75rem; 
-          letter-spacing: 0.125rem;
-          margin-bottom: 16px;    
+          letter-spacing: 0.125rem;    
         }
         h3 {
+          margin-top: 16px;
           margin-bottom: 16px;
         }
         p {
           margin-bottom: 24px;
         }
+        
         }
       }
 
       .reviews {
-        background: #E5E5E5 url('../images/WhatTouristSay.webp') center center/cover no-repeat;
-        min-height: 100dvh;
+        background: $background-color url('../images/WhatTouristSay.webp') center center/cover no-repeat;
+        min-height: min(100dvh, 680px);
   
     .container {
       padding: 120px 0 180px;
       h2 {
         text-align: center;
+        padding-bottom: 30px;
+        line-height: 40px;
+
       }
       .review-content {
         display: flex;
         
-        align-items: center;
+        align-items: stretch;
+        .img-wrapper {
+          flex: 0 0 440px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
         .text-review-wrapper {
-          background-color: #333;
+          flex: 1;
+          background-color: $background-color-dark;
           padding: 48px 65px 48px 60px;
+
           h3 {
             margin-bottom: 16px;
+            
           }
           p {
             line-height: 1.75rem; 
-            letter-spacing: 1.6px;
+            
+            .quote-left {
+              
+              width: 20px;
+              height: 20px;
+              color: $accent-color;
+            }
           }
         }
-        img {
-          width: 440px;
+        
+        
+
+            
+          }
           
         }
       }
 
 
-      }
-    }
+      
+    
 
     footer {
       background-color: black;
       padding: 80px;
-     .footer-container {
-      display: flex;
-      flex-direction: column;
+    }
+    
+    .footer-container {
+      @include flex-column;
       align-items: center;
-      gap: 20px;
-     }
+    }
+
+    .footer-top {
+      text-align: center;
+      padding-bottom: 15px;
+      img {
+        width: 168px;
+        padding-bottom: 8px;
+      }
+      p {
+        font-size: 0.875rem;
+        letter-spacing: 0.175rem;
+      }
+    }
     
     .footer-social {
-
       .soc-list {
         display: flex;
+        justify-content: center;
         gap: 32px;
+        padding: 0;
+        list-style: none;
+      }
     
-        li.social {
+      li.social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        transition: background-color 0.3s ease;
+    
+        a {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 32px;
-          height: 32px;
-          
-          transition: background-color 0.3s ease;
+          width: 100%;
+          height: 100%;
+        }
     
-          a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-          }
+        .soc-icon {
+          height: 32px;
+          color: $text-color;
+          fill: currentColor;
+          transition: color 0.3s ease;
+        }
+    
+        &:hover {
+          background-color: $accent-color;
+          border-radius: 5px;
     
           .soc-icon {
-            height: 24px;
-            color: $text-color;
-            fill: currentColor;
-            transition: color 0.3s ease;
-          }
-    
-          &:hover {
-            background-color: $accent-color;
-            border-radius: 5px;
-    
-            .soc-icon {
-              color: black;
-            }
+            color: black;
           }
         }
       }
     }
-    }
-  
+    
 
 
 
@@ -445,15 +538,52 @@ form {
   
 
 @media screen and (max-width: 1440px) {
+  .search-places
+    .container {
+       padding: 81px 0 45px;
+             
+}
+.why-section {
+  .container {
   
+  img:nth-child(2) {
+    margin-left: 111px;
+  }
+}
+}
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+.review-content {
+  .img-wrapper {
+    width: 30%;
+  }
+  .text-review-wrapper {
+    width: 70%;
+   
+}}
 }
 
 @media screen and (max-width: 1190px) {
   .why-section {
     .container {
       gap: 24px;
+    
+    img:nth-child(2) {
+      margin-left: 36px;
     }
-  }
+ }
+}
+ 
+ .line-container 
+ .line-wrapper  svg {
+  width: 100%;
+  max-width: 874px;
+}
+
+
 }
 
 @media screen and (max-width: 970px) {
@@ -494,7 +624,26 @@ form {
       }
     }
   }
+  .icons-list-wrapper ul {
+    
+    grid-template-columns: 1fr;
+
    }
+   .line-container {
+    display: none;
+  }
+
+  .review-content {
+    flex-direction: column;
+    .img-wrapper {
+      width: 100%
+    }
+    .text-review-wrapper {
+      width: 100%;
+     
+  }}
+}
+
 
    @media screen and (max-width: 760px) {
     .why-section {
@@ -512,13 +661,13 @@ form {
       width: 540px;
   }}
 }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 595px) {
       .hero {
         form {
-          width: 490px;
+          width: 480px;
         }
         .search-wrapper input[type="search"] {
           
-          width: 490px;
+          max-width: 480px;
       }}
   }

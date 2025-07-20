@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
 </head>
-
 <body>
-    <div class="overlay"></div>
+  <div class="overlay"></div>
   <div class="mobile-menu-panel">
     <div class="mm-top">
       <div class="logo">
         <a href="/">
-          <img src="assets/images/Logo-header.webp" alt="logo">
+          <img class="lazy" data-src="assets/images/Logo-header.webp" alt="logo">
         </a>
       </div>
       <div class="hamburger">
@@ -32,152 +31,208 @@
       </ul>
     </nav>
   </div>
-    <div class="page-wrapper">
-    
+  <div class="page-wrapper">
     <main>
-        <!-- Hero -->
-        <section class="hero">
-            <div class="container">
-                <hgroup>
-                    <h1>Bhromaon</h1>
-                    <p> Safe Travel Anywhere</p>
-                </hgroup>
-                <form role="search">
-                <div class="search-wrapper">
-                <input type="search" id="destination-search" name="destination" placeholder="Search Your Travel Destination"
-                aria-label="Search through site content" size="30">
-                <button type="button" aria-label="Search">
-                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 64 64" id="search">
-                    <path d="M63.1296 55.3321L50.6662 42.8708C50.1037 42.3084 49.3411 41.9959 48.541 41.9959H46.5034C49.9537 37.5838 
+      <section class="hero">
+        <div class="container">
+          <hgroup>
+            <h1>Bhromaon</h1>
+            <p> Safe Travel Anywhere</p>
+          </hgroup>
+          <form role="search">
+            <div class="search-wrapper">
+              <input type="search" id="destination-search" name="destination"
+                placeholder="Search Your Travel Destination" aria-label="Search through site content" size="30">
+              <button type="button" aria-label="Search">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 64 64"
+                  id="search">
+                  <path
+                    d="M63.1296 55.3321L50.6662 42.8708C50.1037 42.3084 49.3411 41.9959 48.541 41.9959H46.5034C49.9537 37.5838 
                     52.0038 32.0344 52.0038 25.9975C52.0038 11.6364 40.3655 0 26.0019 0C11.6384 0 0 11.6364 0 25.9975C0 40.3586 11.6384 
                     51.9949 26.0019 51.9949C32.0398 51.9949 37.5903 49.9451 42.0031 46.4955V48.5328C42.0031 49.3327 42.3156 50.0951 42.8781 
                     50.6576L55.3416 63.1188C56.5166 64.2937 58.4168 64.2937 59.5794 63.1188L63.1171 59.5817C64.2922 58.4068 64.2922 56.507 
                     63.1296 55.3321ZM26.0019 41.9959C17.1638 41.9959 10.0007 34.8466 10.0007 25.9975C10.0007 17.1608 17.1513 9.99902 26.0019 
-                    9.99902C34.84 9.99902 42.0031 17.1483 42.0031 25.9975C42.0031 34.8341 34.8526 41.9959 26.0019 41.9959Z" fill="white"></path>
-                    </svg>
-                    <span>Search</span>
-                </button>
-                </div>
-                </form>
-                <div class="scroll-wrapper">
-                    <a href="#why-section">
-                        <span>Scroll Down</span>
-                        <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 64 64" id="chevron-down">
-                            <path d="M25.8786 47.6845L1.58575 23.3915C0.414125 22.2199 0.414125 20.3204 1.58575 19.1489L4.41913 16.3155C5.58875 
-                            15.1459 7.48438 15.1436 8.65675 16.3105L28 35.5631L47.3431 16.3105C48.5155 15.1436 50.4111 15.1459 51.5807 16.3155L54.4141 
-                            19.1489C55.5857 20.3205 55.5857 22.22 54.4141 23.3915L30.1214 47.6845C28.9497 48.856 27.0503 48.856 25.8786 47.6845Z" 
-                            fill="white"></path>
-                        </svg>
-                        </a>
-                </div>
+                    9.99902C34.84 9.99902 42.0031 17.1483 42.0031 25.9975C42.0031 34.8341 34.8526 41.9959 26.0019 41.9959Z"
+                    fill="white"></path>
+                </svg>
+                <span>Search</span>
+              </button>
             </div>
-          </section>
-          <header class="header">
+          </form>
+          <div class="scroll-wrapper">
+            <a href="#why-section">
+              <span>Scroll Down</span>
+              <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 64 64"
+                id="chevron-down">
+                <path
+                  d="M25.8786 47.6845L1.58575 23.3915C0.414125 22.2199 0.414125 20.3204 1.58575 19.1489L4.41913 16.3155C5.58875 
+                            15.1459 7.48438 15.1436 8.65675 16.3105L28 35.5631L47.3431 16.3105C48.5155 15.1436 50.4111 15.1459 51.5807 16.3155L54.4141 
+                            19.1489C55.5857 20.3205 55.5857 22.22 54.4141 23.3915L30.1214 47.6845C28.9497 48.856 27.0503 48.856 25.8786 47.6845Z"
+                  fill="white"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="/">
-                  <img src="assets/images/Logo-header.webp" alt="logo">
-                </a>
-              </div>
-              <div class="header-right">
-                <nav class="main-menu">
-                  <ul>
-                    <li><a href="#">Who We Are</a></li>
-                    <li><a href="#">What We Do</a></li>
-                    <li><a href="#">Travel With Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
+          <div class="logo">
+            <a href="/">
+              <img class="lazy" data-src="assets/images/Logo-header.webp" alt="logo">
+            </a>
+          </div>
+          <div class="header-right">
+            <nav class="main-menu">
+              <ul>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">What We Do</a></li>
+                <li><a href="#">Travel With Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
             </nav>
             <div class="hamburger">
-                <button type="button" onclick="openMenu()">
-                  <span></span>
-                </button>
-              </div>
-        </div>
-        </div>
-    </header>
-
-          <section class="why-section">
-            <div class="container">
-              <div class="content">
-               <hgroup>
-                <h2>Why Choose Us</h2>
-                <p>Tion and dislike men who are so beguiled and demoralized by desire 
-                  by the charms of pleasure of the moment, so blinded by desire, that they cannot 
-                  foresee</p>
-                <p>Ddislike men who are so beguiled and demoralized by the charms of pleasure of the moment, 
-                  so blinded by desire, that.</p>
-               </hgroup>
-               <button class="btn-split" type="button">
-                <span class="text">Explore Places</span>
-                
+              <button type="button" onclick="openMenu()">
+                <span></span>
               </button>
-              </div>
-              <div class="images">
-                  <img src="assets/images/lake-house.webp" alt="Beautiful lake house">
-                  <img src="assets/images/mountains.webp" alt="Mountain valley">
-               
-              </div>
-               </div>
-          
-          </section>
-
-
-          <section class="grand-1">
-            <div class="container">
-              <article class="grand-content">
-              <span class="city" aria-label="Destination country">Spain</span>
-               <h3>Grand Spain Madrid</h3>
-               <p>But I must explain to you how all this mistaken idea of account to 
-                denouncing pleasure and praising pain was account born and I account will give you a 
-                complete account of the system</p>
-                <button class="btn-split" type="button">
-                  <span class="text">Book Now</span> 
-                </button>
-              
-              </article>
-          </div>
-             </section>
-
-             <section class="grand-2">
-              <div class="container">
-                <article class="grand-content">
-                <span class="city" aria-label="Destination country">Spain</span>
-                 <h3>Grand Spain Madrid</h3>
-                 <p>But I must explain to you how all this mistaken idea of account to 
-                  denouncing pleasure and praising pain was account born and I account will give you a 
-                  complete account of the system</p>
-                  <button class="btn-split" type="button">
-                    <span class="text">Book Now</span> 
-                  </button>
-                
-                </article>
             </div>
-               </section>
+          </div>
+        </div>
+      </header>
 
-               <section class="reviews">
-                <div class="container">
-                  <h2>What Our Tourists Say</h2>
-                  <article class="review-content">
-                    <img src="assets/images/ReviewPhoto-4.webp" alt="review-photo">
-                    <div class="text-review-wrapper">
-                    <h3>Sam Sumon</h3>
-                    <p>But I must explain to you how all this mistaken idea of account to denouncinpleasure and praising pain But I must explain to you how all this mistaken idea of account to nai denouncing pleasure and praising pain was account born and I account will give you a complete account of the system was account born and I account will give you a nai the complete account of the system</p>
-                    </div>
-                  </article>
-                </div>
-               </section>
+      <section class="why-section">
+        <div class="container">
+          <div class="content wow animate__zoomInUp animate__delay-2s">
+            <hgroup>
+              <h2>Why Choose Us</h2>
+              <p>Tion and dislike men who are so beguiled and demoralized by desire
+                by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                foresee</p>
+              <p>Ddislike men who are so beguiled and demoralized by the charms of pleasure of the moment,
+                so blinded by desire, that.</p>
+            </hgroup>
+            <button class="btn-split" type="button">
+              <span class="text">Explore Places</span>
+
+            </button>
+          </div>
+          <div class="images wow animate__animated animate__slideInRight animate__delay-3s">
+            <img class="lazy" data-src="assets/images/lake-house.webp" alt="Beautiful lake house">
+            <img class="lazy" data-src="assets/images/mountains.webp" alt="Mountain valley">
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="search-places">
+        <div class="container">
+          <div class="line-container">
+            <div class="line-wrapper">
+              <svg height="92" viewbox="0 0 874 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.502" d="M1 91C1 91 217.014 -110.278 442.118 91C442.118 91 639.939 -111.5 873 91"
+                  stroke="white" stroke-linecap="round" stroke-dasharray="2 5" />
+              </svg>
+            </div>
+          </div>
+          <div class="icons-list-wrapper">
+            <ul>
+              <li class="icon-content">
+                <a href="/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon search">
+                    <use xlink:href="assets/images/sprite.svg#search"></use>
+                  </svg>
+                </a>
+                <h2>Search Places</h2>
+              </li>
+              <li class="icon-content">
+                <a href="/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon check-circle">
+                    <use xlink:href="assets/images/sprite.svg#check-circle"></use>
+                  </svg>
+                </a>
+                <h2>Select Places</h2>
+              </li>
+              <li class="icon-content">
+                <a href="/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon thumbs-up">
+                    <use xlink:href="assets/images/sprite.svg#thumbs-up"></use>
+                  </svg>
+                </a>
+                <h2>Book & Enjoy</h2>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="grand-1">
+        <div class="container">
+          <div class="grand-content">
+            <span class="city">Spain</span>
+            <h3>Grand Spain Madrid</h3>
+            <p>But I must explain to you how all this mistaken idea of account to
+              denouncing pleasure and praising pain was account born and I account will give you a
+              complete account of the system</p>
+            <button class="btn-split" type="button">
+              <span class="text">Book Now</span>
+            </button>
+          </div>
+        </div>
+
+      <div class="grand-2">
+        <div class="container">
+          <div class="grand-content">
+            <span class="city">Spain</span>
+            <h3>Grand Spain Madrid</h3>
+            <p>But I must explain to you how all this mistaken idea of account to
+              denouncing pleasure and praising pain was account born and I account will give you a
+              complete account of the system</p>
+            <button class="btn-split" type="button">
+              <span class="text">Book Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="reviews">
+        <div class="container">
+          <h2>What Our Tourists Say</h2>
+          <article class="review-content">
+            <div class="img-wrapper">
+              <picture>
+                <source srcset="assets/images/ReviewPhoto-4.webp" media="(max-width: 970px)">
+                <source srcset="assets/images/ReviewPhoto-2.webp" media="(max-width: 1280px)">
+                <img class="lazy" data-src="assets/images/ReviewPhoto-1.webp" alt="review-photo">
+              </picture>
+            </div>
+            <div class="text-review-wrapper">
+              <h3>Sam Sumon</h3>
+              <p><svg class="soc-icon quote-left">
+                  <use xlink:href="assets/images/sprite.svg#quote-left"></use>
+                </svg>&nbsp;&nbsp;But I must explain to you how all this mistaken idea of account to denouncinpleasure
+                and praising pain &nbsp;But I must explain to you how all this mistaken idea of account to nai
+                denouncing pleasure and praising pain was account &nbsp;born and I account will give you a complete
+                account of the system was account &nbsp;born and I account will give you a nai the complete account of
+                the system</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
     </main>
     <footer class="footer">
       <div class="container footer-container">
-        <div class="footer-left">
-          <h2></h2>
+        <div class="footer-top">
+          <a href="#">
+            <img class="lazy" data-src="assets/images/logo-footer.webp">
+          </a>
           <p>Safe Travel Anywhere</p>
-         
+        </div>
+
         <div class="footer-social">
           <ul class="soc-list">
-            
+
             <li class="social">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                 <svg class="soc-icon facebook">
@@ -212,15 +267,25 @@
                   <use xlink:href="assets/images/sprite.svg#pinterest"></use>
                 </svg>
               </a>
-            </li> 
-            
+            </li>
+
           </ul>
         </div>
-        </div>
       </div>
+
     </footer>
-</div>
-<script>
+  </div>
+  <script src="assets/js/lazyload.min.js"></script>
+  <script> const lazyLoadInstance = new LazyLoad()
+  </script>
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+    const wow = new WOW({
+      animateClass: 'animate__animated'
+    });
+    wow.init();
+  </script>
+  <script>
     function openMenu() {
       document.querySelector('.overlay').style.display = 'block';
       document.querySelector('.mobile-menu-panel').style.display = 'block';
@@ -229,10 +294,8 @@
     function closeMenu() {
       document.querySelector('.overlay').style.display = 'none';
       document.querySelector('.mobile-menu-panel').style.display = 'none';
-
     }
-
-
   </script>
 </body>
+
 </html>
