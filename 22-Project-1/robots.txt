@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /admin/
+Disallow: /logs.txt
+
+Sitemap: https://lesyamuz.github.io/My_hmworks/22-Project-1/sitemap.xml
+
+Host: 
