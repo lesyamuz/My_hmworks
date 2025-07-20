@@ -317,7 +317,7 @@ header {
   
 
   .container {
-    padding: 60px;
+    padding: 47px 0 48px;
     @include flex-column;
   }
 }
@@ -697,7 +697,10 @@ footer {
 }
 
 .example {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: flex;
   transition: all 0.3s ease;
 }
