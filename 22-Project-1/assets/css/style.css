@@ -741,23 +741,21 @@ footer {
 }
 @media screen and (max-width: 690px) {
   .hero .search-wrapper input[type=search] {
-    width: 540px;
+    width: 90vh;
   }
 }
 @media screen and (max-width: 595px) {
   .hero form {
-    width: 480px;
+    width: 90vh;
   }
   .hero .search-wrapper input[type=search] {
-    max-width: 480px;
+    max-width: 90vh;
   }
 }
-@media screen and (max-width: 520px) {
-  .hero form {
-    width: 420px;
-  }
-  .hero .search-wrapper input[type=search] {
-    max-width: 420px;
+@media screen and (max-width: 370px) {
+  .hero form,
+.hero .search-wrapper input[type=search] {
+    max-width: 90vh;
   }
 }
 .example {

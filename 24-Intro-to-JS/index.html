@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to JavaScript</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <script>
+        console.log("Hello, world from <head>!");
+    </script>
+</head>
+
+<body>
+    <h1>Intro to JavaScript</h1>
+
+    <div class="list">
+        <h2>Cпособи використання JS</h2>
+        <ul>
+            <li>1. &lt;script&gt; у head/body</li>
+            <li>2. Зовнішній файл &lt;script src="..."&gt;</li>
+            <li>3. Інлайн-скрипти (onclick, onload)</li>
+            <li>4. Динамічне створення через createElement</li>
+            <li>5. Обробка подій (addEventListener)</li>
+            <li>6. Таймери (setTimeout, setInterval)</li>
+            <li>7. IIFE (самовикликана функція)</li>
+            <li>8. Класи та об'єкти (OOP)</li>
+            <li>9. Модулі (import/export)</li>
+            <li>10. Зміна/читання DOM</li>
+            <li>11. Консоль розробника (DevTools)</li>
+            <li>12. Використання у фреймворках</li>
+        </ul>
+    </div>
+    <div class="btn-wrap">
+        <button onclick="askName()">Task 1</button>
+        <button onclick="askBirthday()">Task 2</button>
+        <button onclick="askPerimeter()">Task 3</button>
+        <button onclick="askCircleArea()">Task 4</button>
+        <button onclick="convertUsdToEur()">Task 5</button>
+    </div>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Однорядковий коментар
+        /* Багато рядковий 
+        коментар
+        */
+
+        let firstName = "Lesya";
+        let lastName = "Muzychko";
+        let fullName = firstName + " " + lastName;
+        let welcomeMessage = "Hello, " + fullName + "!";
+
+        // -- Неправильні імена змінних -- //
+        // let let = "let is reserved";     // Зарезервовані слова не можна використовувати в якості назв змінних
+        // let user-name = "Kate";     // Дефіс недопустимо  
+        // let 2name = "David";   // Не може починатися з цифри
+        // let user name = "Dmytro"; // Пробіл у змінній вважається помилкою
+        // let ім'я = "Veronica"; //  Апостроф не дозволено використовувати 
+
+
+        //  --Cтилі написання імен змінних--  //
+        let userName = "Danylo"; // camelCase
+        let UserAge = "null"; // PascaleCase
+        let user_profile = "dan"; // snake_case
+        const BIRTHDAY = "15.01.2012"; // верхній snake_case
+
+    </script>
+</body>
+
+</html>

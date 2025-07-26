@@ -665,7 +665,7 @@ footer {
 
     .search-wrapper input[type="search"] {
 
-      width: 540px;
+      width: 90vh;
     }
   }
 }
@@ -673,28 +673,30 @@ footer {
 @media screen and (max-width: 595px) {
   .hero {
     form {
-      width: 480px;
+      width: 90vh;
     }
 
     .search-wrapper input[type="search"] {
 
-      max-width: 480px;
+      max-width: 90vh;
     }
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 370px) {
   .hero {
-    form {
-      width: 420px;
-    }
+    form,
 
     .search-wrapper input[type="search"] {
 
-      max-width: 420px;
+      max-width: 90vh;
     }
   }
 }
+
+
+
+
 
 .example {
   -webkit-user-select: none;
