@@ -1,5 +1,13 @@
 "use strict";
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var car = {
   manufacturer: "",
   model: "",
@@ -70,40 +78,97 @@ var time = {
   show: function show() {
     document.getElementById("timeResult").textContent = "".concat(this.hours.toString().padStart(2, "0"), ":") + "".concat(this.minutes.toString().padStart(2, "0"), ":") + "".concat(this.seconds.toString().padStart(2, "0"));
   },
-  normalize: function normalize() {
-    if (this.seconds >= 60) {
-      this.minutes += Math.floor(this.seconds / 60);
-      this.seconds = this.seconds % 60;
-    }
-
-    if (this.minutes >= 60) {
-      this.hours += Math.floor(this.minutes / 60);
-      this.minutes = this.minutes % 60;
-    }
-
-    this.hours = this.hours % 24;
-
-    if (this.seconds < 0 || this.minutes < 0 || this.hours < 0) {
-      var total = this.hours * 3600 + this.minutes * 60 + this.seconds;
-      total = (total % 86400 + 86400) % 86400;
-      this.hours = Math.floor(total / 3600);
-      this.minutes = Math.floor(total % 3600 / 60);
-      this.seconds = total % 60;
-    }
+  setTotalSeconds: function setTotalSeconds(total) {
+    total = (total % 86400 + 86400) % 86400;
+    this.hours = Math.floor(total / 3600);
+    this.minutes = Math.floor(total % 3600 / 60);
+    this.seconds = total % 60;
   },
   addSeconds: function addSeconds(sec) {
-    this.seconds += sec;
-    this.normalize();
+    var total = this.hours * 3600 + this.minutes * 60 + this.seconds + sec;
+    this.setTotalSeconds(total);
     this.show();
   },
   addMinutes: function addMinutes(min) {
-    this.minutes += min;
-    this.normalize();
-    this.show();
+    this.addSeconds(min * 60);
   },
   addHours: function addHours(h) {
-    this.hours += h;
-    this.normalize();
-    this.show();
+    this.addSeconds(h * 3600);
   }
 };
+var fraction = {
+  create: function create(n, d) {
+    if (d === 0) throw new Error("Знаменник не може бути 0!");
+    return {
+      numerator: n,
+      denominator: d
+    };
+  },
+  gcd: function gcd(a, b) {
+    return b === 0 ? a : this.gcd(b, a % b);
+  },
+  simplify: function simplify(fr) {
+    var divisor = this.gcd(Math.abs(fr.numerator), Math.abs(fr.denominator));
+    return {
+      numerator: fr.numerator / divisor,
+      denominator: fr.denominator / divisor
+    };
+  },
+  add: function add(fr1, fr2) {
+    return this.simplify(this.create(fr1.numerator * fr2.denominator + fr2.numerator * fr1.denominator, fr1.denominator * fr2.denominator));
+  },
+  subtract: function subtract(fr1, fr2) {
+    return this.simplify(this.create(fr1.numerator * fr2.denominator - fr2.numerator * fr1.denominator, fr1.denominator * fr2.denominator));
+  },
+  multiply: function multiply(fr1, fr2) {
+    return this.simplify(this.create(fr1.numerator * fr2.numerator, fr1.denominator * fr2.denominator));
+  },
+  divide: function divide(fr1, fr2) {
+    if (fr2.numerator === 0) throw new Error("Ділення на нуль!");
+    return this.simplify(this.create(fr1.numerator * fr2.denominator, fr1.denominator * fr2.numerator));
+  },
+  toString: function toString(fr) {
+    return "".concat(fr.numerator, "/").concat(fr.denominator);
+  }
+};
+
+function getFractions() {
+  var num1 = parseInt(document.getElementById("num1").value) || 0;
+  var den1 = parseInt(document.getElementById("den1").value) || 1;
+  var num2 = parseInt(document.getElementById("num2").value) || 0;
+  var den2 = parseInt(document.getElementById("den2").value) || 1;
+  return [fraction.create(num1, den1), fraction.create(num2, den2)];
+}
+
+function calc(op) {
+  try {
+    var _getFractions = getFractions(),
+        _getFractions2 = _slicedToArray(_getFractions, 2),
+        f1 = _getFractions2[0],
+        f2 = _getFractions2[1];
+
+    var result;
+
+    switch (op) {
+      case "add":
+        result = fraction.add(f1, f2);
+        break;
+
+      case "subtract":
+        result = fraction.subtract(f1, f2);
+        break;
+
+      case "multiply":
+        result = fraction.multiply(f1, f2);
+        break;
+
+      case "divide":
+        result = fraction.divide(f1, f2);
+        break;
+    }
+
+    document.getElementById("fracResult").textContent = "\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442: ".concat(fraction.toString(result));
+  } catch (e) {
+    document.getElementById("fracResult").textContent = "\u041F\u043E\u043C\u0438\u043B\u043A\u0430: ".concat(e.message);
+  }
+}
