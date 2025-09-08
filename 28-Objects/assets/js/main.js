@@ -69,15 +69,11 @@ function calculateTrip() {
   `;
 }
 
-
-
-
 const time = {
   hours: 20,
   minutes: 59,
   seconds: 45,
 
-  
   show: function() {
     document.getElementById("timeResult").textContent =
       `${this.hours.toString().padStart(2, "0")}:` +
@@ -85,48 +81,94 @@ const time = {
       `${this.seconds.toString().padStart(2, "0")}`;
   },
 
-  
-  normalize: function() {
-    
-    if (this.seconds >= 60) {
-      this.minutes += Math.floor(this.seconds / 60);
-      this.seconds = this.seconds % 60;
-    }
-
-    if (this.minutes >= 60) {
-      this.hours += Math.floor(this.minutes / 60);
-      this.minutes = this.minutes % 60;
-    }
-
-    
-    this.hours = this.hours % 24;
-
-    
-    if (this.seconds < 0 || this.minutes < 0 || this.hours < 0) {
-      let total = this.hours * 3600 + this.minutes * 60 + this.seconds;
-      total = ((total % 86400) + 86400) % 86400; 
-      this.hours = Math.floor(total / 3600);
-      this.minutes = Math.floor((total % 3600) / 60);
-      this.seconds = total % 60;
-    }
+  setTotalSeconds: function(total) {
+    total = ((total % 86400) + 86400) % 86400;
+    this.hours = Math.floor(total / 3600);
+    this.minutes = Math.floor((total % 3600) / 60);
+    this.seconds = total % 60;
   },
 
   addSeconds: function(sec) {
-    this.seconds += sec;
-    this.normalize();
+    let total = this.hours * 3600 + this.minutes * 60 + this.seconds + sec;
+    this.setTotalSeconds(total);
     this.show();
   },
 
   addMinutes: function(min) {
-    this.minutes += min;
-    this.normalize();
-    this.show();
+    this.addSeconds(min * 60);
   },
 
-  
   addHours: function(h) {
-    this.hours += h;
-    this.normalize();
-    this.show();
+    this.addSeconds(h * 3600);
   }
-}
+};
+
+
+const fraction = {
+      create: function(n, d) {
+        if (d === 0) throw new Error("Знаменник не може бути 0!");
+        return { numerator: n, denominator: d };
+      },
+      gcd: function(a, b) {
+        return b === 0 ? a : this.gcd(b, a % b);
+      },
+      simplify: function(fr) {
+        const divisor = this.gcd(Math.abs(fr.numerator), Math.abs(fr.denominator));
+        return {
+          numerator: fr.numerator / divisor,
+          denominator: fr.denominator / divisor
+        };
+      },
+      add: function(fr1, fr2) {
+        return this.simplify(this.create(
+          fr1.numerator * fr2.denominator + fr2.numerator * fr1.denominator,
+          fr1.denominator * fr2.denominator
+        ));
+      },
+      subtract: function(fr1, fr2) {
+        return this.simplify(this.create(
+          fr1.numerator * fr2.denominator - fr2.numerator * fr1.denominator,
+          fr1.denominator * fr2.denominator
+        ));
+      },
+      multiply: function(fr1, fr2) {
+        return this.simplify(this.create(
+          fr1.numerator * fr2.numerator,
+          fr1.denominator * fr2.denominator
+        ));
+      },
+      divide: function(fr1, fr2) {
+        if (fr2.numerator === 0) throw new Error("Ділення на нуль!");
+        return this.simplify(this.create(
+          fr1.numerator * fr2.denominator,
+          fr1.denominator * fr2.numerator
+        ));
+      },
+      toString: function(fr) {
+        return `${fr.numerator}/${fr.denominator}`;
+      }
+    };
+
+    function getFractions() {
+      const num1 = parseInt(document.getElementById("num1").value) || 0;
+      const den1 = parseInt(document.getElementById("den1").value) || 1;
+      const num2 = parseInt(document.getElementById("num2").value) || 0;
+      const den2 = parseInt(document.getElementById("den2").value) || 1;
+      return [fraction.create(num1, den1), fraction.create(num2, den2)];
+    }
+
+    function calc(op) {
+      try {
+        const [f1, f2] = getFractions();
+        let result;
+        switch (op) {
+          case "add": result = fraction.add(f1, f2); break;
+          case "subtract": result = fraction.subtract(f1, f2); break;
+          case "multiply": result = fraction.multiply(f1, f2); break;
+          case "divide": result = fraction.divide(f1, f2); break;
+        }
+        document.getElementById("fracResult").textContent = `Результат: ${fraction.toString(result)}`;
+      } catch (e) {
+        document.getElementById("fracResult").textContent = `Помилка: ${e.message}`;
+      }
+    }
