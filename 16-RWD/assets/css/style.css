@@ -1,15 +1,112 @@
-*, *::before, *::after {
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/lato-v24-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/lato-v24-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/red-hat-display-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/red-hat-display-v20-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/red-hat-display-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/red-hat-display-v20-latin-500italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/red-hat-display-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/red-hat-display-v20-latin-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-a, button {
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  text-decoration: none;
+}
+
+a,
+button {
   transition: all 0.2s ease;
+}
+
+a {
+  color: #232323;
 }
 
 button {
@@ -20,18 +117,20 @@ img {
   vertical-align: top;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container {
-  width: min(90%, 1200px);
+  width: min(100% - 40px, 1170px);
   margin: 0 auto;
 }
 
 body {
   font-size: 1rem;
   color: #232323;
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+  min-width: 350px;
 }
 
 .page-wrapper {
@@ -41,4 +140,615 @@ body {
 }
 .page-wrapper main {
   flex-grow: 1;
+  padding-top: 100px;
 }
+
+/*--HEADER--*/
+header {
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 77px;
+}
+
+.main-menu {
+  margin-top: -3px;
+}
+.main-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  justify-content: flex-end;
+}
+.main-menu ul a {
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.2625rem;
+  color: #333;
+}
+.main-menu ul a::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  transition: all 0.2s ease;
+}
+.main-menu ul a:hover::after {
+  width: 40px;
+}
+
+.search-wrap button {
+  border: none;
+  background-color: transparent;
+}
+.search-wrap button:hover {
+  scale: 1.1;
+}
+
+.hero {
+  background: #E5E5E5 url("../images/bg-image.webp") center center/cover no-repeat;
+  height: calc(100dvh - 100px);
+  min-height: 500px;
+}
+.hero .container {
+  padding-top: 100px;
+}
+@media screen and (max-width: 800px) {
+  .hero .container {
+    padding-top: 80px;
+  }
+}
+
+h1 {
+  font-family: "Red Hat Display";
+  font-size: clamp(2.4375rem, 3.33vw, 3rem);
+  font-weight: 600;
+  line-height: 4rem;
+  letter-spacing: 0.15rem;
+  padding-right: 35%;
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+.blog-section {
+  padding: 90px 0;
+}
+.blog-section h2 {
+  font-family: "Red Hat Display";
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 2.4px;
+  margin-bottom: 50px;
+}
+.blog-section article {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.blog-section article:not(:last-child) {
+  margin-bottom: 50px;
+}
+.blog-section article > div {
+  width: 50%;
+}
+.blog-section article.reverse {
+  flex-direction: row-reverse;
+}
+.blog-section article .content-wrap {
+  padding-right: 10%;
+}
+.blog-section article .content-wrap.reverse {
+  padding-left: 10%;
+}
+.blog-section article .content-wrap .tag,
+.blog-section article .content-wrap time {
+  color: #7B7B7B;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.1rem;
+  margin-bottom: 30px;
+}
+.blog-section article .content-wrap h3 {
+  color: #000;
+  font-family: "Red Hat Display";
+  font-size: 1.438rem;
+  font-weight: 500;
+  line-height: 166%;
+  letter-spacing: 0.144rem;
+  margin-bottom: 15px;
+}
+.blog-section article .content-wrap .description {
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.05rem;
+  margin-top: 50px;
+}
+
+.posts-section .title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.posts-section .title-wrap h3 {
+  color: #000;
+  font-family: "Red Hat Display";
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 166%;
+  letter-spacing: 0.175rem;
+}
+.posts-section .posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.posts-section article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.posts-section article .img-wrap {
+  margin-bottom: 25px;
+}
+.posts-section article .post-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.posts-section article .post-tag,
+.posts-section article time {
+  font-family: "Lato";
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.075rem;
+}
+.posts-section article h4 {
+  color: #000;
+  font-family: "Red Hat Display";
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 166%;
+  letter-spacing: 0.138rem;
+  margin-bottom: 20px;
+}
+.posts-section article .description {
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.05rem;
+}
+
+.popular-posts-section {
+  padding: 90px 0;
+}
+.popular-posts-section .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.popular-posts-section .title-wrap h3 {
+  color: #000;
+  font-family: "Red Hat Display";
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 166%;
+  /* 46.48px */
+  letter-spacing: 0.175rem;
+}
+.popular-posts-section .popular-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.popular-posts-section article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.popular-posts-section article .img-wrap {
+  margin-bottom: 20px;
+}
+.popular-posts-section article .post-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.popular-posts-section article .post-tag,
+.popular-posts-section article time {
+  font-family: "Lato";
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.075rem;
+}
+.popular-posts-section article h4 {
+  color: #000;
+  font-family: "Red Hat Display";
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 166%;
+  letter-spacing: 0.138rem;
+  margin-bottom: 20px;
+}
+.popular-posts-section article .description {
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.05rem;
+}
+
+.btn-wrap {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.button {
+  background-color: #565656;
+  color: #fff;
+  padding: 9.5px 45px;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  border: none;
+  letter-spacing: 0.1rem;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #323232;
+}
+.button:active {
+  scale: 0.98;
+}
+
+.info .container {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(40px, 8vw, 160px);
+  margin-bottom: 90px;
+}
+.info .container .full-time {
+  flex: 0 1 470px;
+  font-family: "Red Hat Display";
+  font-size: 1.438rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.144rem;
+}
+.info .container .text {
+  flex: 0 1 470px;
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.059rem;
+}
+.info .container .text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F4F4;
+  color: #000;
+  padding: 70px 0 30px;
+}
+.footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-container .footer-left h2 {
+  font-family: "Red Hat Display";
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 30px;
+}
+.footer .footer-container .footer-left ul li {
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.1rem;
+}
+.footer .footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Lato";
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.075rem;
+}
+
+.footer-social .soc-list {
+  display: flex;
+  gap: 23px;
+  padding-top: 40px;
+}
+.footer-social .soc-list li.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #565656;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.footer-social .soc-list li.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.footer-social .soc-list li.social .soc-icon {
+  height: 24px;
+  color: #565656;
+  fill: currentColor;
+  transition: color 0.3s ease;
+}
+.footer-social .soc-list li.social:hover {
+  background-color: #565656;
+  border-color: #565656;
+}
+.footer-social .soc-list li.social:hover .soc-icon {
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+}
+.hamburger button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  position: relative;
+}
+.hamburger button::before, .hamburger button::after {
+  content: "";
+}
+.hamburger button::before, .hamburger button::after,
+.hamburger button span {
+  display: inline-block;
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: #333;
+  position: absolute;
+  left: 3px;
+}
+.hamburger button span {
+  top: 8px;
+}
+.hamburger button::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hamburger button::after {
+  bottom: 8px;
+}
+.hamburger button.close span {
+  display: none;
+}
+.hamburger button.close::before {
+  top: 19px;
+  transform: rotate(45deg);
+}
+.hamburger button.close::after {
+  top: 18px;
+  transform: rotate(-45deg);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.mobile-menu-panel {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 100dvh;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  z-index: 101;
+}
+.mobile-menu-panel .mm-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.mobile-menu-panel .logo {
+  font-size: 1rem;
+}
+
+.mobile-menu ul {
+  border-top: 1px solid lightblue;
+}
+.mobile-menu li {
+  border-top: 1px solid lightblue;
+}
+.mobile-menu a {
+  display: inline-block;
+  height: 50px;
+  font-size: 1.5rem;
+  width: 100%;
+  color: #232323;
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    padding-right: 30%;
+  }
+  .blog-section article .content-wrap {
+    padding-right: 0;
+  }
+  .blog-section article .content-wrap.reverse {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 970px) {
+  .main-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .header-right {
+    gap: 40px;
+  }
+  .hero {
+    background-image: url("../images/bg-image-1.webp");
+  }
+  h1 {
+    padding-right: 0;
+  }
+  .blog-section article .content-wrap {
+    padding-right: 0;
+  }
+  .posts-section .posts {
+    display: block;
+  }
+  .posts-section .posts article:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .blog-section {
+    padding: 70px 0;
+  }
+  .popular-posts-section {
+    padding: 70px 0;
+  }
+  .info .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .info .container .full-time,
+  .info .container .text {
+    flex: unset;
+    width: 100%;
+    max-width: 100%;
+  }
+  .info .container .text {
+    text-align: end;
+  }
+  .footer {
+    padding: 50px 0;
+    display: block;
+  }
+  .footer .footer-container {
+    display: block;
+    text-align: center;
+  }
+  .footer .footer-social {
+    margin-bottom: 40px;
+  }
+  .footer .footer-social .soc-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 970px) and (min-width: 501px) {
+  .posts-section .posts article {
+    flex-direction: row;
+    width: 100%;
+  }
+  .posts-section .posts article:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero {
+    background-image: url("../images/bg-image-2.webp");
+  }
+  .blog-section h2 {
+    text-align: center;
+  }
+  .blog-section article,
+  .blog-section article.reverse {
+    flex-direction: column-reverse;
+  }
+  .blog-section article > div,
+  .blog-section article.reverse > div {
+    width: 100%;
+  }
+  .posts-section .posts {
+    flex-direction: row;
+  }
+  .popular-posts-section .popular-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .info .container .text {
+    text-align: start;
+  }
+  .footer .footer-container .footer-left h2 {
+    font-size: 2rem;
+  }
+  .footer .footer-container .footer-left ul li {
+    font-size: 1.125rem;
+  }
+  .footer .footer-bottom {
+    max-width: 70%;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  .footer .footer-bottom p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

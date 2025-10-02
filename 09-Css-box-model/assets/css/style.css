@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  margin-inline: auto;
+  background-color: #3399CC;
+  border: 25px solid #2b81ac;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 66px 135px 119px;
+}
+
+h1 {
+  color: #FFF;
+  font-family: "Lucida Sans Unicode";
+  font-size: 1.313rem;
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 39px;
+}
+
+.wrapper {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  padding: 2px;
+  max-width: 1170px;
+  margin-inline: auto;
+  list-style: none;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  margin-bottom: 35px;
+}
+
+.blue {
+  background: #3399CC;
+}
+
+.light-blue {
+  background: #33CCCC;
+}
+
+.purple {
+  background: #996699;
+}
+
+.red {
+  background: #C24747;
+}
+
+.orange {
+  background: #E2674A;
+}
+
+.yellow {
+  background: #FFCC66;
+}
+
+.mint {
+  background: #99CC99;
+}
+
+.steel-blue {
+  background: #669999;
+}
+
+.pink {
+  background: #CC6699;
+}
+
+.green {
+  background: #339966;
+}
+
+.indigo {
+  background: #666699;
+}
+
+.item {
+  padding: 2px;
+  display: inline-block;
+  background-color: #fff;
+  font-size: 1.375rem;
+  color: #FFF;
+  text-align: center;
+  width: 25%;
+  cursor: pointer;
+}
+.item:hover {
+  opacity: 0.6;
+}
+.item.width50 {
+  width: 50%;
+}
+.item.width100 {
+  width: 100%;
+}
+.item .item_weather {
+  display: block;
+  text-align: center;
+  font-size: 1.375rem;
+  color: tomato;
+  line-height: 2.625rem;
+}
+.item .item_weather p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Lucida Sans Unicode";
+  font-size: 1.375rem;
+  font-weight: 400;
+  text-align: center;
+}
+.item .item_weather i {
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "weathericons";
+  font-size: 42px;
+  font-weight: 400;
+  line-height: normal;
+  vertical-align: middle;
+}
+.item .item-wrap {
+  padding: 25px 0 34px;
+}
+
+p {
+  color: #FFF;
+  font-family: "Lucida Sans Unicode";
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */
