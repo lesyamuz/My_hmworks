@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="assets/css/dist/style.min.css">
+</head>
+<body>
+  <div class="container py-5">
+
+    <!-- 1. Редагування тексту -->
+    <section class="mb-5">
+      <h2 class="mb-3">Редагування тексту</h2>
+      <div class="card p-3 shadow-sm">
+        <div id="editableDiv" class="card-body">
+          Це текст, який можна редагувати за допомогою Ctrl + E
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Таблиця -->
+    <section class="mb-5">
+      <h2 class="mb-3">Сортування таблиці</h2>
+      <div class="table-responsive">
+        <table id="sortableTable" class="table table-striped table-bordered table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>Ім’я</th>
+              <th>Вік</th>
+              <th>Місто</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Олена</td><td>28</td><td>Київ</td></tr>
+            <tr><td>Андрій</td><td>35</td><td>Львів</td></tr>
+            <tr><td>Марія</td><td>22</td><td>Одеса</td></tr>
+            <tr><td>Іван</td><td>31</td><td>Харків</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3. Змінюваний блок -->
+    <section>
+      <h2 class="mb-3">Змінюваний блок</h2>
+      <div class="card p-3 shadow-sm d-inline-block">
+        <div class="resizable" id="resizableBox">
+          <div class="resizer"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="assets/js/dist/main.prod.js"></script>
+</body>
+</html>

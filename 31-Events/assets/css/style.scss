@@ -1,0 +1,121 @@
+// 🎨 Змінні
+$text-color: #232323;
+$accent-color: #292426;
+$background-color: #ececec;
+$primary-color: #007bff;
+$primary-hover: #0056b3;
+$border-radius: 5px;
+$padding-base: 10px 20px;
+
+// 🔹 Міксини
+@mixin button-style {
+  cursor: pointer;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  padding: $padding-base;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+@mixin box-style($bg: white, $radius: $border-radius, $padding: 10px) {
+  background: $bg;
+  border-radius: $radius;
+  padding: $padding;
+  border: 1px solid #ccc;
+}
+
+// 🔹 Скидання стилів
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, ol { list-style: none; }
+a, button { transition: all 0.2s ease; text-decoration: none; color: $text-color;
+  &:hover { color: $accent-color; }
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: $text-color;
+  padding: 20px;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+h1 { text-align: center; margin-bottom: 20px; }
+h3 { font-size: 1rem; }
+
+// 🎵 Списки
+li {
+  margin: 6px 0;
+  list-style-type: decimal;
+  position: relative;
+  padding-left: 25px;
+
+  &::before {
+    content: "🎶";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+// 🔹 Кнопки
+button { @include button-style; }
+
+// 1. Редагування тексту
+#editableDiv, #editableTextarea {
+  width: 100%;
+  max-width: 600px;
+  @include box-style;
+
+  &#editableTextarea { resize: vertical; }
+}
+
+// 2. Таблиця
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+  @include box-style;
+  overflow: hidden;
+
+  th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
+  th { background-color: $primary-color; color: white; cursor: pointer; user-select: none; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+}
+
+// 3. Змінюваний блок
+.resizable {
+  width: 200px;
+  height: 150px;
+  position: relative;
+  border: 2px solid #333;
+  @include box-style;
+
+  .resizer {
+    width: 15px;
+    height: 15px;
+    background: $primary-color;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+    border-radius: 3px;
+  }
+}

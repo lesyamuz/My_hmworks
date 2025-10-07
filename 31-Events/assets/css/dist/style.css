@@ -1,0 +1,128 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a, button {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #232323;
+}
+a:hover, button:hover {
+  color: #292426;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #232323;
+  padding: 20px;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+li {
+  margin: 6px 0;
+  list-style-type: decimal;
+  position: relative;
+  padding-left: 25px;
+}
+li::before {
+  content: "🎶";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+#editableDiv, #editableTextarea {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+#editableDiv#editableTextarea, #editableTextarea#editableTextarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+table th {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.resizable {
+  width: 200px;
+  height: 150px;
+  position: relative;
+  border: 2px solid #333;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.resizable .resizer {
+  width: 15px;
+  height: 15px;
+  background: #007bff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+  border-radius: 3px;
+}
