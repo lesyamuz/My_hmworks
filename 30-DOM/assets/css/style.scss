@@ -1,0 +1,167 @@
+// 🎨 Змінні
+$text-color: #232323;
+$accent-color: #292426;
+$background-color: #ececec;
+
+// 🔹 Скидання базових стилів
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+button {
+  transition: all 0.2s ease;
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+body {
+  font-size: 1rem;
+  color: $text-color;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+// 🎵 Стиль для списків
+li {
+  margin: 6px 0;
+  list-style-type: decimal;
+  position: relative;
+  padding-left: 25px;
+
+  &::before {
+    content: "🎶";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.author {
+  font-weight: bold;
+}
+
+.song {
+  font-style: italic;
+  color: darkblue;
+}
+
+// 💬 Модальне вікно
+.modal {
+  display: none; // спочатку приховане
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // напівпрозорий фон
+  justify-content: center;
+  align-items: center;
+
+  &.show {
+    display: flex;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// 🚦 Світлофор
+.traffic-light {
+  width: 100px;
+  background: #333;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  .light {
+    width: 60px;
+    height: 60px;
+    background-color: #111;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &.red.active {
+      background-color: red;
+    }
+
+    &.yellow.active {
+      background-color: yellow;
+    }
+
+    &.green.active {
+      background-color: green;
+    }
+  }
+}

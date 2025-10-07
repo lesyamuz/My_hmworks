@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="assets/css/dist/style.min.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous"
+  >
+</head>
+
+<body>
+  <div class="container py-5">
+
+    <!-- 🎵 Плейлист -->
+    <div class="playlist-section mb-5">
+      <h1 class="text-center mb-4">Document Object Model (DOM)</h1>
+      <h2>Плейлист</h2>
+      <ol id="playlist"></ol>
+    </div>
+
+    <!-- 💬 Модальне вікно -->
+    <div class="modal-section mb-5">
+      <h2 class="mb-3">Модальне вікно</h2>
+      <button id="openBtn" class="btn btn-primary">Відкрити</button>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content text-center">
+          <p>Це модальне вікно!</p>
+          <button id="closeBtn" class="btn btn-secondary mt-3">Закрити</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🚦 Світлофор -->
+    <div class="traffic-section text-center">
+      <h2 class="mb-4">Світлофор</h2>
+      <div class="traffic-light mx-auto">
+        <div class="light red active"></div>
+        <div class="light yellow"></div>
+        <div class="light green"></div>
+      </div>
+      <button id="next" class="btn btn-primary mt-4">Наступний колір</button>
+    </div>
+
+  </div>
+
+  <script src="assets/js/dist/main.prod.js"></script>
+</body>
+</html>
