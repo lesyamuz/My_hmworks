@@ -1,0 +1,1 @@
+"use strict";var btn=document.querySelector(".btn_burger"),block=document.querySelector(".nav__menu");btn.onclick=function(){block.classList.toggle("active")},window.addEventListener("resize",function(){821<=window.innerWidth&&block.classList.remove("active")});
